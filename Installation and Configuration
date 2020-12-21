@@ -1,0 +1,38 @@
+Install the following dependencies:
+
+sudo apt-get install cmake python-catkin-pkg python-empy python-nose python-setuptools libgtest-dev python-rosinstall python-rosinstall-generator python-wstool build-essential git
+
+Create the catkin root and source folders:
+
+mkdir -p ~/catkin_ws/src
+
+In your terminal, run
+
+cd ~/catkin_ws/src
+
+Clone the github repository of RPLIDAR ROS package.
+
+git clone  https://github.com/robopeak/rplidar_ros.git
+
+Run
+
+cd ..
+
+Then, run catkin_make to compile your catkin workspace.
+
+catkin_make
+
+Then run to source the environment with your current terminal. Don't close the terminal.
+
+source devel/setup.bash
+
+Open a new terminal, run the following command - DO NOT CLOSE THE FIRST TERMINAL
+
+roscore
+
+In the terminal which you sourced the environment, run below command
+
+roslaunch rplidar_ros view_rplidar.launch
+
+An instance of Rviz will then open with a map of the RPLIDAR’s surroundings.
+
